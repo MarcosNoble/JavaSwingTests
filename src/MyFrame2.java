@@ -95,7 +95,10 @@ public class MyFrame2 implements ActionListener {
             }
         } else if (e.getSource() == createNewRoomButton) {
             // Do something when Create New Room button is clicked
-            JOptionPane.showMessageDialog(frame, "Create New Room button clicked.");
+            String roomName = JOptionPane.showInputDialog(frame, "Enter the room name:");
+            if (!options.contains(roomName)) {
+                JOptionPane.showMessageDialog(frame,"criando"+ roomName);
+            }
         } else if (e.getSource() == refreshListButton) {
             // Add a new option to the options list
             options.add("sala " + (options.size() + 1));
